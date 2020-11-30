@@ -7,12 +7,12 @@ public enum Brand{
         this.brandName = brandName;
         this.brandCode = -1;
     }
-/*
+
     Brand (String brandName, int brandCode){
         this.brandName = brandName;
         this.brandCode = brandCode;
     }
-*/
+
     public String getBrandName(){
         return brandName;
     }
@@ -20,7 +20,7 @@ public enum Brand{
         return brandCode;
     }
 
-    /*public String toString(){
+    public String toString(){
         String output = null;
         switch(this){
             case LG: output ="LG"; break;
@@ -29,5 +29,5 @@ public enum Brand{
             case CARRIER: output ="Carrier"; break;
         }
         return output;
-    }*/
+    }
 }

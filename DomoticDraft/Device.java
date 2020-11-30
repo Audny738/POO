@@ -9,14 +9,14 @@ public class Device {
         this.Id = 0;
         this.Status = false;
         this.Name = null;
-        this.brand = null;
+        this.deviceSpecs = null;
     }
 
-    public Device(int Id, boolean Status, String Name, Brand brand) {
+    public Device(int Id, boolean Status, String Name, DeviceSpecs info) {
         this.Id = Id;
         this.Status = Status;
         this.Name = Name;
-        this.brand = brand;
+        this.deviceSpecs = info;
     }
 
     public int getId() {
@@ -31,8 +31,8 @@ public class Device {
         return Name;
     }
 
-    public Brand getBrand() {
-        return brand;
+    public DeviceSpecs getDeviceSpecs() {
+        return deviceSpecs;
     }
     
     public void setId(int id){
@@ -47,23 +47,16 @@ public class Device {
         this.Name = Name;
     }
     
-    public void setBrand(Brand brand){
-        this.brand = brand;
+    public void setBrand(DeviceSpecs info){
+        this.deviceSpecs = info;
     }
     public String toString(){
         String output;
         output = "ID: " + this.Id +"\n" +
                 "Status: " + this.Status + "\n"+
                 "Name: " + this.Name + "\n" +
-                "Brand: " + this.brand.getBrandName()+ "\n";
+                "Specs: " + this.deviceSpecs + "\n";
         return output;
-    }
-    public static void main(String[] args) {
-        Brand brand = Brand.LG;
-        Device device = new Device(0, true, "AC", brand);
-        
-        System.out.println(device);
-        
     }
 
 }    
